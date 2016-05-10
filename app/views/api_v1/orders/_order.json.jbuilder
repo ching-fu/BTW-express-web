@@ -19,5 +19,3 @@ if order.courier_id
 end
 json.receiverName order.detail.addressees_name
 json.receiverPhone order.detail.addressees_mobile
-
-json.description order.description
