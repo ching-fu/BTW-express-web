@@ -12,7 +12,7 @@
         ＳＨＯＷ
 *************************/
 .show{
-  width: 360px;
+  width: 345px;
   margin: 0 auto;
   padding: 0;
 
@@ -34,7 +34,7 @@
      ＧＯＯＧＬＥＭＡＰ
 *************************/
 #googleMap {
-   width:360px;
+   width:345px;
    margin: 0 auto;
    height: 300px;
    border-style: solid;
@@ -64,6 +64,8 @@
   }
   #googleMap{
     margin-top: 56px;
+    width: 100%;
+    padding-top: 91.06%;
   }
 }
 /*大大大大大大大大大大大大大大大大大*/
@@ -74,5 +76,7 @@
   }
   #googleMap{
     margin-top: 56px;
+    width: 100%;
+    padding-top: 91.06%;
   }
 }
