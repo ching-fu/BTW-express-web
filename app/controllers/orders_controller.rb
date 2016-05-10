@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
 
   before_action :authenticate_user!, :except => [:index,:show]
-  before_action :find_order, :only => [:show,:take,:reject,:destroy]
+  before_action :find_order, :only => [:show,:take,:reject,:destroy,:update]
   def index
       @orders = Order.includes(:detail).all.order('created_at DESC')
   end
@@ -12,6 +12,11 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
     @order.build_detail( description: params[:description] )
+  end
+  def update
+    @order.status="done"
+    @order.save
+    redirect_to orders_path
   end
 
   def create
