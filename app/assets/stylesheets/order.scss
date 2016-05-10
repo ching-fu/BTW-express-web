@@ -47,12 +47,12 @@ $margin-top: 200px;
     background-repeat: no-repeat ;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
   }
   #pic_01 {background:linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
-    ),image-url("test.jpg");}
+    ),image-url("deliver.jpg");}
   #pic_02 {background:linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
