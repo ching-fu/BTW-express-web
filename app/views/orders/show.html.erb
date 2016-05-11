@@ -56,10 +56,15 @@
                 <div class="buttons">
                   <%if current_user.id==@order.owner_id%>
                   <!-- owner -->
-                    <%= link_to '取消訂單', order_path(@order),:method =>:delete, :class => "btn btn-danger" %>
-                    <%if @order.courier_id!=nil%>
-                      <button class="btn btn-primary" disabled="disabled">訂單處理中</button>
+                    <%if @order.status=="go"%>
+                      <%= link_to '訂單已送達', order_path(@order),:method =>:patch, :class => "btn btn-success" %>                      
                     <%end%>
+                    <%if @order.status!="done"%>                                  
+                     <%= link_to '取消訂單', order_path(@order),:method =>:delete, :class => "btn btn-danger" %>
+                      <%if @order.courier_id!=nil%>
+                        <button class="btn btn-primary" disabled="disabled">訂單處理中</button>
+                      <%end%>
+                    <%end%> 
                   <%else%>
                   <!-- not owner -->
                     <%if @order.courier_id==nil%>
