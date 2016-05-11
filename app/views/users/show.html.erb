@@ -74,22 +74,23 @@
             <div class="content active">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5 col-md-offset-2 col-xs-12">
+                        <div class="col-md-5 col-md-offset-1 col-xs-12 not-yet">
                             <!-- Dear Richard, 以下是「委託案件」（owner)的 未結單插入地 -->
                             <h2>未結單</h2>
-                            <h4>送餐中</h4>
+                            <h4 class="taking">送餐中</h4>
                             <ul>
                                 <% @owner_go.each do |o|%>
                                 <li>代買者：<%= User.find(o.courier_id).fullname%></li>
 
                                 <div>
+                                <i class="fa fa-spinner fa-spin fa-lg fa-pulse" aria-hidden="true"></i>
                                     <br></br><%= render :partial => "orders/order", :locals => {:o => o} %>
                                     <br></br>
                                 </div>
 
                                 <%end%>
                             </ul>
-                            <h4>尚未被接單</h4>
+                            <h4 class="not-take">尚未被接單</h4>
                             <ul>
                                 <% @owner_post.each do |o|%>
                                 <br>
@@ -100,6 +101,7 @@
                                 <%end%>
                             </ul>
                         </div>
+
                         <div class="col-md-5 col-xs-12 done-order">
                             <!-- Dear Richard, 以下是「委託案件」（owner)的 已結單插入地 -->
                             <h2>已結單</h2>

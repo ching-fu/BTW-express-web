@@ -101,7 +101,33 @@
 }
 .content {
   display: none;
+
+  ul{
+    padding: 0;
+  }
+
+  h2{
+    color: #3A4750;
+    width: 100px;
+    padding: 1px 5px;
+    // background-color: #F6C90E;
+    outline-style: solid;
+    outline-color: #F6C90E;
+  }
+
+  .taking{
+    font-weight: bold;
+  }
+
+  .not-take{
+
+  }
 }
+
+.not-yet h4{
+  margin-top: 50px;
+}
+
 .content.active {
   display: block;
 }
