@@ -41,7 +41,8 @@ $margin-top: 200px;
   #pic_01, #pic_02, #pic_03, #pic_04, #pic_05 {
     display: run-in;
     height: 768px;
-    background-position: center ;
+    background-position: center center;
+    background-attachment: fixed !important;
     -webkit-background-size: cover !important;
     background-size: cover !important;
     background-repeat: no-repeat ;
